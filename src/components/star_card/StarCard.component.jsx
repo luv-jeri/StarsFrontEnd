@@ -1,5 +1,5 @@
 // Custom css import
-import ms from "./StarCard.module.css";
+import ms from './StarCard.module.css';
 
 // CUSTOM materials import
 import rightArrowIcon from '../../materials/icons/right-arrow.png';
@@ -19,7 +19,7 @@ const Card = ({ item }) => {
         </div>
         <div className={ms.view_more_button}>
           <h2>View Details</h2>
-          <img src={rightArrowIcon} alt="" />
+          <img src={rightArrowIcon} alt='' />
         </div>
       </div>
     </>
