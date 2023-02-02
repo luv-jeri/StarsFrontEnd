@@ -1,0 +1,54 @@
+.starCard_container {
+    width: 20rem;
+    border: 1px solid black;
+    padding: 0.6rem;
+    background-color: #913175;
+    border-radius: 0.8rem;
+    border-style: none;
+    box-shadow: 0px 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.star_name {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.horizontal_line {
+    margin: 1rem auto;
+}
+
+.star_details>p {
+    font-size: 1.5rem;
+}
+
+.view_more_button {
+    background-color: white;
+    width: 12rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+.view_more_button:hover {
+    background-color: white;
+    opacity: 0.5;
+    width: 12rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.view_more_button h2 {
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border-color: none;
+}
+.view_more_button img {
+    height: 1.5rem;
+}

@@ -1,19 +1,28 @@
+// Custom css import
+import ms from "./StarCard.module.css";
+
+// CUSTOM materials import
+import rightArrowIcon from '../../materials/icons/right-arrow.png';
+
 const Card = ({ item }) => {
   return (
-    <div
-      style={{
-        border: '1px solid black',
-        padding: '10px',
-        margin: '10px',
-      }}
-    >
-      Name : {item.name}
-      <br />
-      Distance : {item.distance}
-      <br />
-      Mass : {item.mass}
-      <br />
-    </div>
+    <>
+      <div className={ms.starCard_container}>
+        <div className={ms.star_name}> {item.name}</div>
+        <hr className={ms.horizontal_line} />
+        <div className={ms.star_details}>
+          <p>Distance : {item.distance}</p>
+          <p>Mass : {item.mass}</p>
+          <p>temperature : {item.temperature}</p>
+          <p>color: {item.color}</p>
+          <p>radius:{item.radius}</p>
+        </div>
+        <div className={ms.view_more_button}>
+          <h2>View Details</h2>
+          <img src={rightArrowIcon} alt="" />
+        </div>
+      </div>
+    </>
   );
 };
 
