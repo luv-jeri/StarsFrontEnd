@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
 
 // Custom css import
 // import ms from "./List.module.css";
 
-function List({ itemsArray, ToUse }) {
+function List({ itemsArray, ToUse, onClick }) {
   return (
-    <>   
+    <>
       {itemsArray.map((item) => {
-        return <ToUse key={item._id} item={item} />;
+        return (
+          <div key={item._id} onClick={onClick}>
+            <ToUse item={item} />
+          </div>
+        );
       })}
     </>
   );

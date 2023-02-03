@@ -1,17 +1,14 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import inputFields from '../../../ui_data/add_star.field-data';
-import ms from './AddStarModel.module.css';
+import ms from './UpdateStarModel.module.css';
 
-const AddStarModel = () => {
-  const [data, setData] = useState({
-    name: '',
-    distance: '',
-    mass: '',
-    temperature: '',
-    color: '',
-    radius: '',
-  });
+const UpdateStarModel = ({ starData }) => {
+  const [data, setData] = useState(starData);
+
+  useEffect(() => {
+    setData(starData);
+  }, [starData]);
 
   const handleChanges = (e) => {
     setData({
@@ -23,7 +20,17 @@ const AddStarModel = () => {
   const handleStarSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/stars', data);
+      const res = await axios.patch(`/stars?id=${starData._id}`, data);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const handleStarDelete = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.delete(`/stars?id=${starData._id}`);
+      console.log(res);
     } catch (err) {
       console.log(err);
     }
@@ -41,6 +48,7 @@ const AddStarModel = () => {
                   className={ms.model_input_field}
                   type={field.type}
                   name={field.name}
+                  value={data[field.name]}
                 />
               </div>
             );
@@ -48,10 +56,13 @@ const AddStarModel = () => {
           <button className={ms.model_submit_btn} onClick={handleStarSubmit}>
             Submit
           </button>
+          <button className={ms.model_submit_btn} onClick={handleStarDelete}>
+            Delete
+          </button>
         </form>
       </div>
     </>
   );
 };
 
-export default AddStarModel;
+export default UpdateStarModel;
