@@ -1,0 +1,80 @@
+
+.fake_space {
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    /* bottom: 0; */
+    /* left: 0;
+    right: 0; */
+    opacity: 0.5;
+}
+
+.model_container {
+    width: 40vw;
+    background-color: antiquewhite;
+    padding: 1rem;
+    /* margin: auto; */
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.closing_button {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.model_heading {
+    text-align: center;
+    margin: 0rem auto 1rem auto;
+}
+
+.model_body_input_fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.model_body_input_fields form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.model_input_field {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.submit_button {
+    width: 8rem;
+    height: 2.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem
+}
+.cancel_button{
+    width: 8rem;
+    height: 2.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem
+}
