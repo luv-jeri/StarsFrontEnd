@@ -52,3 +52,16 @@
 .view_more_button img {
     height: 1.5rem;
 }
+
+.edit_delete_button{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.edit_delete_button img{
+    width: 2rem;
+    cursor: pointer;
+}
+.edit_delete_button img:hover{
+    color: red;
+}

@@ -47,3 +47,23 @@
 .section_heading h1{
     font-size: 3rem;
 }
+
+.add_star_button{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+.add_star_button:hover{
+    zoom: 1.1;
+    color: #fff;
+    background-color: #000;
+}
