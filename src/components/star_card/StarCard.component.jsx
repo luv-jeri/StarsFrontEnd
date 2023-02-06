@@ -1,7 +1,6 @@
-// Custom css import
 import ms from './StarCard.module.css';
 
-const Card = ({ item }) => {
+const Card = ({ item, onClick}) => {
   return (
     <>
       <div
@@ -9,6 +8,7 @@ const Card = ({ item }) => {
         style={{
           display: item.name ? 'flex' : 'none',
         }}
+        onClick={onClick}
       >
         <div className={ms.star_name}> {item.name}</div>
       </div>

@@ -5,11 +5,6 @@ const inputFields = [
     name: 'name',
   },
   {
-    label: 'Distance',
-    type: 'number',
-    name: 'distance',
-  },
-  {
     label: 'Mass',
     type: 'text',
     name: 'mass',
